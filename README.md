@@ -1,7 +1,7 @@
-# ResumeLens — AI Resume & Job Match Analyzer
+# ResumeLens - AI Resume & Job Match Analyzer
 
 ## Overview
-ResumeLens is a developer-built, deterministic resume analysis tool. Unlike generic ATS scoring platforms that output black-box numerical scores based on arbitrary AI sentiment, ResumeLens uses an explainable evidence-based scoring model. It extracts the raw document text, runs structured schema extraction via Gemini 1.5 Flash, and calculates a final score locally based on the presence of structural requirements, quantifiable impact, and role alignment.
+ResumeLens is a deterministic resume analysis tool. Unlike generic ATS scoring platforms that output black-box numerical scores based on arbitrary AI sentiment, ResumeLens uses an explainable evidence-based scoring model. It extracts the raw document text, runs structured schema extraction via Gemini 1.5 Flash, and calculates a final score locally based on the presence of structural requirements, quantifiable impact, and role alignment.
 
 This project was built to demonstrate practical skills in full-stack Next.js development, API integration, document processing, and structured NLP output.
 
