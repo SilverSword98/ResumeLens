@@ -30,3 +30,8 @@ The core pipeline follows a strict separation of concerns:
 1. **Extraction Pipeline**: `FormData` -> In-Memory `Buffer` -> Text Extraction (using Node environment APIs). 
 2. **Schema-Constrained Generation**: The application prompts Gemini with a rigorous JSON Schema using `responseMimeType: "application/json"`. The LLM is instructed *not* to score the resume, but rather to extract facts (count of weak verbs, list of formatting anomalies, skill statuses).
 3. **Local Scoring Calculation**: The Next.js API route takes the validated JSON schema and calculates scores out of 100 based on custom weighted logic (Structure 20%, Impact 25%, Alignment 30%, etc.).
+
+## Limitations & Future Improvements
+- **Document Parsing Edge Cases**: Highly complex multi-column PDFs might yield messy text structures. Currently mitigated by Gemini's contextual understanding, but a bounding-box OCR pipeline would improve layout analysis.
+- **Memory Limits**: Files are processed in-memory. For massive scales, a streaming parser would be necessary.
+- **Testing**: Includes basic component structures; future iterations should add robust Playwright E2E tests for the PDF upload flow.
